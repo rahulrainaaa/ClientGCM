@@ -25,7 +25,4 @@ public class Constants
 
     public static String REGISTER_DEVICE = "http://rahul.mulkindia.in/ProMobileWebService/activateApp/activate";
 
-    //SMS pattern
-    public static final String ACTIVATION_VALIDATION_MSG = "PRO_CUSTOMER_OFFER_VALID_9999";
-    public static final String ACTIVATION_VALICATION_NUMBER = "+919673465221";
 }

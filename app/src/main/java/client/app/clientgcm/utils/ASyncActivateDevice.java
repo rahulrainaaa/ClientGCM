@@ -40,7 +40,6 @@ public class ASyncActivateDevice extends AsyncTask<String, String, String> {
             if(!pref.equals("NO"))
             {
                 jsonRequest.put("DEVICEID", pref.toString());
-
             }
         }
         catch (Exception e){}
@@ -105,7 +104,7 @@ public class ASyncActivateDevice extends AsyncTask<String, String, String> {
             if (response.getString("statusCode").contains("200"))
             {
                 SharedPreferences.Editor se = context.getSharedPreferences("info_cache", 0).edit();
-                se.putString("ACTIVATE_SMS","YES");
+                se.putString("REGISTER","YES");
                 se.commit();
                 Toast.makeText(context, "Device Registered Successfully.", Toast.LENGTH_SHORT).show();
             }
@@ -121,8 +120,6 @@ public class ASyncActivateDevice extends AsyncTask<String, String, String> {
         } catch (Exception e) {
             Toast.makeText(context, "Please check internet connection.", Toast.LENGTH_LONG).show();
         }
-
-       // Toast.makeText(context, "" + s, Toast.LENGTH_LONG).show();
 
         super.onPostExecute("");
     }

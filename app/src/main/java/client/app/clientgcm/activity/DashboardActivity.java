@@ -93,33 +93,13 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         String pref = s.getString("REGISTER_GCM", "NO").trim();
         if(!pref.equals("NO"))
         {
-            if(s.getString("ACTIVATE_SMS","NO").equals("NO"))
-            {
-                if(!s.getString("REGISTER_SMS", "NO").equals("NO"))
-                {
-                    ASyncActivateDevice info = new ASyncActivateDevice(this);
-                    info.execute("");
-                }
-            }
+           if(!s.getString("REGISTER", "NO").equals("NO"))
+           {
+               ASyncActivateDevice info = new ASyncActivateDevice(this);
+               info.execute("");
+           }
+
         }
-
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-
-                //Check if the SMS Permission is given or not
-                int check1 = ContextCompat.checkSelfPermission(DashboardActivity.this, Manifest.permission.RECEIVE_SMS);
-                int check2 = ContextCompat.checkSelfPermission(DashboardActivity.this, Manifest.permission.READ_SMS);
-
-                if((check1 != PackageManager.PERMISSION_GRANTED) || (check2 != PackageManager.PERMISSION_GRANTED))
-                {
-                    Toast.makeText(getApplicationContext(), "Go to permissions and \nEnable the SMS permission", Toast.LENGTH_LONG).show();
-                    Utility.startInstalledAppDetailsActivity(DashboardActivity.this);
-                }
-
-            }
-        }, 1200);
 
     }
 
