@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bgcontactus" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Contact Us"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="0dp"
+            android:text="Lorem lupsum, 524,\nLondon Street,\nOpposite HDFC Bank,\nNorth Carolina,\nLondon"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:id="@+id/id_text_address" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Tel"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="0dp"
+            android:text="+91-9823313233"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="0dp"
+            android:text="020-12345678"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Email"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="0dp"
+            android:text="raahul29@gmail.com"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+</ScrollView>
